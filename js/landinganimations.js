@@ -18,8 +18,8 @@ anime.timeline({ loop: false, autoplay: true })
         delay: 1000
     })
     .add({
-        targets: "#ryan-stewart-text",
-        translateY: [100, 0],
+        targets: "#rx17-text",
+        translateY: [200, 0],
         opacity: [0, 1],
         easing: "easeOutExpo",
         duration: 500

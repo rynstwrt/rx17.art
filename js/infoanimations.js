@@ -16,29 +16,28 @@ const infoTimeline = anime.timeline({ loop: false, autoplay: false, easing: "eas
         delay: 500
     })
     .add({
-        targets: ".highlight",
+        targets: "#info-page h2:nth-child(2) .highlight",
         color: ["#111111", "#FFFFFF"],
         duration: 750,
-        delay: anime.stagger(750)
     })
     .add({
-        targets: "#info-page h2:last-of-type",
+        targets: "#info-page h2:nth-child(3)",
         opacity: [0, 1],
         translateX: ["100vw", 0],
-        delay: 500
     })
     .add({
-        targets: "#some-emphasis-line",
-        width: [0, "100%"],
-        easing: "easeInOutExpo",
-        duration: 1000
+        targets: "#info-page h2:nth-child(3) .highlight:nth-child(1)",
+        color: ["#111111", "#FFFFFF"],
+        duration: 750,
     })
     .add({
-        targets: "#some-emphasis-line",
-        scaleX: [1, 0],
-        easing: "easeInOutExpo",
-        duration: 1000
-    });
-
-
-
+        targets: "#info-page h2:nth-child(3) .highlight:nth-child(2)",
+        color: ["#111111", "#FFFFFF"],
+        duration: 750,
+    })
+    .add({
+        targets: "#social-list-container a",
+        color: ["#111111", "#EF8354"],
+        duration: 650,
+        delay: anime.stagger(125, { start: 250 })
+    })

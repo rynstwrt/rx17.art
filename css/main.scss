@@ -111,28 +111,29 @@ h2
     align-items: center;
     position: relative;
 
-    #ryan-stewart-text
+    #rx17-text
     {
         margin-bottom: 7px;
         transform-origin: 0 100%;
-        width: 240px;
+        width: 250px;
         z-index: 0;
-        font-size: 2.5em;
-        letter-spacing: 2px;
+        font-size: 4.5em;
+        letter-spacing: 10px;
         line-height: 1em;
-        font-family: "Neue Helvetica Extra Black", sans-serif;
+        text-align: center;
+        font-family: "Exo 2", sans-serif;
         text-transform: uppercase;
 
         @include breakpoint(sm)
         {
             width: 190px;
-            font-size: 2.15em;
+            font-size: 2.5em;
         }
 
         @include breakpoint(md)
         {
             width: 290px;
-            font-size: 2.85em;
+            font-size: 6em;
             letter-spacing: 3px;
         }
 
@@ -145,7 +146,7 @@ h2
         @include breakpoint(xxxl)
         {
             width: 440px;
-            font-size: 4em;
+            font-size: 9em;
         }
     }
 
@@ -161,26 +162,26 @@ h2
 
         @include breakpoint(sm)
         {
-            width: 200px;
-            height: 200px;
+            width: 200px !important;
+            height: 200px !important;
         }
 
         @include breakpoint(md)
         {
-            width: 300px;
-            height: 300px;
+            width: 300px !important;
+            height: 300px !important;
         }
 
         @include breakpoint(xxl)
         {
-            width: 370px;
-            height: 370px;
+            width: 370px !important;
+            height: 370px !important;
         }
 
         @include breakpoint(xxxl)
         {
-            width: 450px;
-            height: 450px;
+            width: 450px !important;
+            height: 450px !important;
         }
 
         #arm-container
@@ -297,7 +298,7 @@ h2
         @include breakpoint(md)
         {
             width: 40px;
-            bottom: 5%;
+            bottom: 3%;
         }
 
         @include breakpoint(xxl)
@@ -407,109 +408,62 @@ h2
             text-decoration: underline;
             text-decoration-color: $accent-color;
         }
-
-        #some-emphasis
-        {
-            display: inline-flex;
-            flex-direction: column;
-            line-height: .95;
-
-            #some-emphasis-line
-            {
-                background-color: $accent-color;
-                height: 2px;
-                transform-origin: 100% 50%;
-            }
-        }
     }
-}
 
 
-#projects-page
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    div
+    #social-list-container
     {
-        margin: 7% 0;
-
-        @include breakpoint(sm)
-        {
-            margin: 3px 0;
-        }
-
-        @include breakpoint(md)
-        {
-            margin: 7% 0;
-        }
-
-        @include breakpoint(lg)
-        {
-            margin: 2% 0;
-        }
-
-        @include breakpoint(xxxl)
-        {
-            margin: 4% 0;
-        }
-
-        h2
-        {
-            margin-bottom: 5px;
-            text-decoration: underline;
-            text-decoration-color: $accent-color;
-        }
+        margin-top: 100px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        align-items: center;
 
         ul
         {
-            display: flex;
-            flex-direction: column;
             list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
 
             li
             {
-                margin: 5px 0;
-
-                &:before
-                {
-                    content: "▪";
-                    color: $accent-color;
-                }
+                margin: 0 10%;
 
                 a
                 {
-                    color: inherit;
+                    color: initial;
                     text-decoration: none;
-                    font-family: "Neue Helvetica", sans-serif;
-                    font-size: 1em;
-                    letter-spacing: 1px;
+                    font-size: 1.75em;
+                    transition: transform .2s ease-out, color .2s ease-out;
 
                     @include breakpoint(md)
                     {
-                        font-size: 1.1em;
+                        font-size: 2.25em;
                     }
 
                     @include breakpoint(lg)
                     {
-                        font-size: 1.075em;
+                        font-size: 2em;
                     }
 
                     @include breakpoint(xl)
                     {
-                        font-size: 1.125em;
+                        font-size: 2.125em;
                     }
 
                     @include breakpoint(xxxl)
                     {
-                        font-size: 1.6em;
+                        font-size: 2.8em;
                     }
 
                     &:hover
                     {
-                        text-decoration: underline;
-                        text-decoration-color: $accent-color;
+                        color: lighten($accent-color, 7%) !important;
+                        transform: translateY(-5px);
                     }
                 }
             }
@@ -600,63 +554,6 @@ h2
             {
                 margin: 2% 0;
                 max-width: 25%;
-            }
-        }
-    }
-
-    #social-list-container
-    {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: relative;
-        align-items: center;
-
-        ul
-        {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 2;
-
-            li
-            {
-                margin: 0 10%;
-
-                a
-                {
-                    color: initial;
-                    text-decoration: none;
-                    font-size: 1.75em;
-                    transition: transform .2s ease-out, color .2s ease-out;
-
-                    @include breakpoint(md)
-                    {
-                        font-size: 2.25em;
-                    }
-
-                    @include breakpoint(lg)
-                    {
-                        font-size: 2em;
-                    }
-
-                    @include breakpoint(xl)
-                    {
-                        font-size: 2.125em;
-                    }
-
-                    @include breakpoint(xxxl)
-                    {
-                        font-size: 2.8em;
-                    }
-
-                    &:hover
-                    {
-                        color: lighten($accent-color, 7%) !important;
-                        transform: translateY(-5px);
-                    }
-                }
             }
         }
     }
