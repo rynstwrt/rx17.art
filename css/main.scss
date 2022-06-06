@@ -54,13 +54,12 @@ body
     background-color: $background-color;
     color: $primary-text-color;
     overflow-x: hidden;
-    // overflow-y: visible;
 }
 
 
 h2
 {
-    font-family: "Neue Helvetica Extra Black", sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     font-size: 2em;
     letter-spacing: 1px;
     line-height: 1.1em;
@@ -96,7 +95,6 @@ h2
     height: 100vh;
     max-height: 100vh;
     overflow: hidden;
-    // overflow: visible;
 
     &:not(#landing-page)
     {
@@ -115,40 +113,34 @@ h2
 
     #rx17-text
     {
-        margin-bottom: 7px;
         transform-origin: 0 100%;
-        width: 250px;
         z-index: 0;
-        font-size: 4.5em;
-        letter-spacing: 10px;
-        line-height: 1em;
+        font-size: 4em;
+        letter-spacing: 6px;
         text-align: center;
-        font-family: "Exo 2", sans-serif;
+        font-family: "Syncopate", sans-serif;
         text-transform: uppercase;
 
         @include breakpoint(sm)
         {
-            width: 200px;
-            font-size: 2.5em;
+            font-size: 2em;
         }
 
         @include breakpoint(md)
         {
-            width: 300px;
-            font-size: 6em;
-            letter-spacing: 3px;
+            font-size: 5em;
+            letter-spacing: 7px;
         }
 
         @include breakpoint(xxl)
         {
-            width: 370px;
             font-size: 7em;
         }
 
         @include breakpoint(xxxl)
         {
-            width: 480px;
-            font-size: 9em;
+            font-size: 8.5em;
+            letter-spacing: 10px;
         }
     }
 
@@ -161,29 +153,30 @@ h2
         position: relative;
         z-index: 1;
         border-radius: 10px;
+        margin-top: 5px;
 
         @include breakpoint(sm)
         {
-            width: 200px !important;
-            height: 200px !important;
+            width: 200px;
+            height: 200px;
         }
 
         @include breakpoint(md)
         {
-            width: 300px !important;
-            height: 300px !important;
+            width: 300px;
+            height: 300px;
         }
 
         @include breakpoint(xxl)
         {
-            width: 370px !important;
-            height: 370px !important;
+            width: 370px;
+            height: 370px;
         }
 
         @include breakpoint(xxxl)
         {
-            width: 450px !important;
-            height: 450px !important;
+            width: 450px;
+            height: 450px;
         }
 
         #arm-container
@@ -323,7 +316,6 @@ h2
     }
 }
 
-
 #info-page
 {
     display: flex;
@@ -403,15 +395,49 @@ h2
             {
                 max-width: 25%;
             }
+
+            .line
+            {
+                position: absolute;
+                left: 0;
+                bottom: -12px;
+                width: 100%;
+                height: 3px;
+                background-color: $accent-color;
+            }
         }
 
-        .highlight
+        .line
         {
-            text-decoration: underline;
-            text-decoration-color: $accent-color;
+            position: absolute;
+            right: 0;
+            bottom: -12px;
+            width: 100%;
+            height: 3px;
+            background-color: $accent-color;
         }
-    }
 
+        // .highlight
+        // {
+        //     position: relative;
+        //     display: inline-flex;
+        //     padding-bottom: .15em;
+        //
+        //     .line
+        //     {
+        //         opacity: 0;
+        //         position: absolute;
+        //         left: 0;
+        //         height: 3px;
+        //         width: 100%;
+        //         background-color: $accent-color;
+        //         transform-origin: 0 0;
+        //         bottom: 0;
+        //     }
+        // }
+
+
+    }
 
     #social-list-container
     {
@@ -437,7 +463,7 @@ h2
 
                 a
                 {
-                    color: initial;
+                    color: $accent-color;
                     text-decoration: none;
                     font-size: 1.75em;
                     transition: transform .2s ease-out, color .2s ease-out;
@@ -449,17 +475,17 @@ h2
 
                     @include breakpoint(lg)
                     {
-                        font-size: 2em;
+                        font-size: 3em;
                     }
 
                     @include breakpoint(xl)
                     {
-                        font-size: 2.125em;
+                        font-size: 2.75em;
                     }
 
                     @include breakpoint(xxxl)
                     {
-                        font-size: 2.8em;
+                        font-size: 3em;
                     }
 
                     &:hover
