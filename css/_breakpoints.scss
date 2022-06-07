@@ -1,0 +1,17 @@
+$breakpoints: (
+    sm: 576px, // landscape phones
+    md: 780px, // tablets
+    lg: 992px, // landscape tablets
+    xl: 1200px, // desktops
+    xxl: 1500px, // larger desktops
+    xxxl: 2000px // even larger desktops
+);
+
+
+@mixin breakpoint($bp)
+{
+    @media (min-width: map-get($breakpoints, $bp))
+    {
+        @content;
+    }
+}

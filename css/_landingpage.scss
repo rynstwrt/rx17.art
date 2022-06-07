@@ -1,0 +1,75 @@
+@import "./turntable.scss";
+
+
+#landing-page
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    #rx17-text
+    {
+        transform-origin: 0 100%;
+        z-index: 0;
+        font-size: 4em;
+        letter-spacing: 6px;
+        text-align: center;
+        font-family: "Syncopate", sans-serif;
+        text-transform: uppercase;
+
+        @include breakpoint(sm)
+        {
+            font-size: 2em;
+        }
+
+        @include breakpoint(md)
+        {
+            font-size: 5em;
+            letter-spacing: 7px;
+        }
+
+        @include breakpoint(xxl)
+        {
+            font-size: 7em;
+        }
+
+        @include breakpoint(xxxl)
+        {
+            font-size: 8.5em;
+            letter-spacing: 10px;
+        }
+    }
+
+    #down-arrow-container
+    {
+        width: 35px;
+        position: absolute;
+        bottom: 2%;
+
+        @include breakpoint(md)
+        {
+            width: 40px;
+            bottom: 3%;
+        }
+
+        @include breakpoint(xxl)
+        {
+            width: 45px;
+            bottom: 6%;
+        }
+
+        @include breakpoint(xxxl)
+        {
+            width: 50px;
+            bottom: 4%;
+        }
+
+        img
+        {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

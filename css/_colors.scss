@@ -1,0 +1,15 @@
+$background-color: #111111;
+$primary-text-color: white;
+$accent-color: #EF8354;
+
+$turntable-color: #BDBDBE;
+
+$record-color: lighten(#0e0e0e, 3%);
+$record-lines-color: #0e0e0e;
+$record-center-color: $accent-color;
+$record-hole-color: black;
+$record-highlight-color: white;
+$record-highlight-opacity: .05;
+
+$counterweight-color: $record-color;
+$arm-color: darken($turntable-color, 17%);
