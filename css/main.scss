@@ -1,8 +1,5 @@
 @import "./colors.scss";
 @import "./breakpoints.scss";
-@import "./landingpage.scss";
-@import "./infopage.scss";
-
 
 *
 {
@@ -27,36 +24,6 @@ body
 }
 
 
-h2
-{
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 2.1em;
-    letter-spacing: 1px;
-
-    @include breakpoint(sm)
-    {
-        font-size: 2.5em;
-    }
-
-    @include breakpoint(md)
-    {
-        font-size: 2.70em;
-        letter-spacing: 2px;
-    }
-
-    @include breakpoint(xxl)
-    {
-        font-size: 3.5em;
-        letter-spacing: 3px;
-    }
-
-    @include breakpoint(xxxl)
-    {
-        font-size: 4.5em;
-    }
-}
-
-
 .page
 {
     width: 100vw;
@@ -66,28 +33,26 @@ h2
     overflow: hidden;
     margin: 0 auto;
 
-    &:not(#landing-page)
-    {
-        padding: 0 7%;
-    }
-
     @include breakpoint(lg)
-    {
-        max-width: 950px;
-    }
-
-    @include breakpoint(xl)
     {
         max-width: 1100px;
     }
 
+    @include breakpoint(xl)
+    {
+        max-width: 1200px;
+    }
+
     @include breakpoint(xxl)
     {
-        max-width: 1500px;
+        max-width: 1900px;
     }
 
     @include breakpoint(xxxl)
     {
-        max-width: 1850px;
+        max-width: 2100px;
     }
 }
+
+@import "./landingpage.scss";
+@import "./infopage.scss";

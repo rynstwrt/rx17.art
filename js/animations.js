@@ -1,8 +1,7 @@
 const scrollPaddingPixels = 250;
-const debugMode = true;
+const debugMode = false;
 let hasPlayedTurntableAnims = debugMode ? true : false;
 let hasPlayedInfoAnims = false;
-
 
 //===================== LANDING ANIMATIONS =====================//
 const platterAnim = anime({
@@ -46,7 +45,8 @@ anime.timeline({ loop: false, autoplay: true })
 
 
 //===================== INFO ANIMATIONS =====================//
-const infoTimeline = anime.timeline({ loop: false, autoplay: false, easing: "easeOutExpo", duration: 400 })
+//const infoTimeline = anime.timeline({ loop: false, autoplay: false, easing: "easeOutExpo", duration: 400 })
+const infoTimeline = anime.timeline({ loop: false, autoplay: false, easing: "easeOutExpo", duration: (debugMode ? 50 : 400) })
     .add({ // Hello!
         targets: "#info-page h2:first-of-type",
         opacity: [0, 1],
@@ -79,12 +79,12 @@ const infoTimeline = anime.timeline({ loop: false, autoplay: false, easing: "eas
     .add({ // Social icons
         targets: "#social-list-container a",
         opacity: [0, 1],
-        duration: 250,
+        duration: 350,
         keyframes: [
-            { scale: 1.33 },
-            { scale: 1 }
+            { scale: 1.4, color: "#EF8354" },
+            { scale: 1, color: "#FFFFFF" }
         ],
-        delay: anime.stagger(50, { start: 500 })
+        delay: anime.stagger(35, { start: 500 })
     });
 
 

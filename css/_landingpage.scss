@@ -1,5 +1,6 @@
-@import "./turntable.scss";
+//main:main.scss
 
+@import "./turntable.scss";
 
 #landing-page
 {
@@ -21,7 +22,7 @@
 
         @include breakpoint(sm)
         {
-            font-size: 2em;
+            font-size: 2.9em;
         }
 
         @include breakpoint(md)
@@ -37,7 +38,7 @@
 
         @include breakpoint(xxxl)
         {
-            font-size: 8.5em;
+            font-size: 10em;
             letter-spacing: 10px;
         }
     }
@@ -51,7 +52,19 @@
         @include breakpoint(md)
         {
             width: 40px;
+            bottom: 2%;
+        }
+
+        @include breakpoint(lg)
+        {
+            width: 45px;
             bottom: 3%;
+        }
+
+        @include breakpoint(xl)
+        {
+            width: 43px;
+            bottom: 2%;
         }
 
         @include breakpoint(xxl)
@@ -62,8 +75,8 @@
 
         @include breakpoint(xxxl)
         {
-            width: 50px;
-            bottom: 4%;
+            width: 80px;
+            bottom: 3%;
         }
 
         img

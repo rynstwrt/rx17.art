@@ -1,32 +1,50 @@
+//main:main.scss
+
 #info-page
 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: flex-end;
     position: relative;
+    padding: 75px 7% 0 7%;
+
+    @include breakpoint(sm)
+    {
+        padding: 25px 7% 0 7%;
+    }
+
+    @include breakpoint(md)
+    {
+        padding: 75px 7% 0 7%;
+    }
 
     h2
     {
-        text-align: right;
-        margin: 7% 0;
+        margin: 10% 0;
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 2.1em;
+        letter-spacing: 1px;
         max-width: 70%;
 
         @include breakpoint(sm)
         {
-            margin: 2% 0;
-            max-width: 50%;
+            margin: 0;
+            font-size: 1.5em;
+            max-width: 40%;
         }
 
         @include breakpoint(md)
         {
-            margin: 11% 0;
+            margin: 10% 0;
+            font-size: 2.70em;
+            letter-spacing: 2px;
+            max-width: 50%;
         }
 
         @include breakpoint(lg)
         {
             margin: 3% 0;
-            max-width: 40%;
+            max-width: 35%;
         }
 
         @include breakpoint(xl)
@@ -36,145 +54,104 @@
 
         @include breakpoint(xxl)
         {
-            max-width: 40%;
+            font-size: 3.5em;
+            letter-spacing: 3px;
+            max-width: 35%;
         }
 
         @include breakpoint(xxxl)
         {
-            max-width: 45%;
-        }
-
-        &:nth-child(2)
-        {
-            text-align: left;
-            align-self: flex-start;
-
-            @include breakpoint(sm)
-            {
-                max-width: 50%;
-            }
-
-            @include breakpoint(md)
-            {
-                max-width: 50%;
-            }
-
-            @include breakpoint(lg)
-            {
-                max-width: 60%;
-            }
-
-            @include breakpoint(xl)
-            {
-                max-width: 35%;
-            }
-
-            @include breakpoint(xxl)
-            {
-                max-width: 30%;
-            }
-
-            @include breakpoint(xxxl)
-            {
-                max-width: 35%;
-            }
-
-            .line
-            {
-                position: absolute;
-                left: 0;
-                bottom: -12px;
-                width: 100%;
-                height: 3px;
-                background-color: $accent-color;
-            }
+            margin: 4% 0;
+            font-size: 4.5em;
         }
 
         .line
         {
             position: absolute;
-            right: 0;
             bottom: -12px;
             width: 100%;
             height: 3px;
             background-color: $accent-color;
         }
+    }
 
+    h2:first-child, h2:last-of-type
+    {
+        text-align: right;
+
+        .line
+        {
+            right: 0;
+        }
+    }
+
+    h2:nth-child(2)
+    {
+        text-align: left;
+        align-self: flex-start;
+
+        .line
+        {
+            left: 0;
+        }
+    }
+
+    h2:last-of-type
+    {
+        margin-bottom: 0;
     }
 
     #social-list-container
     {
-        $social-list-margin: 50px;
-        margin: $social-list-margin 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: absolute;
-        align-items: center;
-        left: 0;
-        right: 0;
-        bottom: $social-list-margin;
-
         ul
         {
-            list-style: none;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 2;
+            justify-content: flex-end;
+            list-style: none;
 
-            li
+            a
             {
-                margin: 0 17px;
+                color: $primary-text-color;
+                text-decoration: none;
+                font-size: 1.75em;
+                transition: transform .15s ease-out, color .15s ease-out;
+                margin-left: 25px;
+                margin-top: calc(12px + 10px);
 
-                /*
-                $breakpoints: (
-                    sm: 576px, // landscape phones
-                    md: 780px, // tablets
-                    lg: 992px, // landscape tablets
-                    xl: 1200px, // desktops
-                    xxl: 1500px, // larger desktops
-                    xxxl: 2000px // even larger desktops
-                );
-                */
-
-                @include breakpoint(sm)
+                @include breakpoint(md)
                 {
-
+                    font-size: 2.05em;
+                    margin-top: 25px;
                 }
 
-                a
+                @include breakpoint(lg)
                 {
-                    color: $accent-color;
-                    text-decoration: none;
-                    font-size: 1.75em;
-                    transition: transform .2s ease-out, color .2s ease-out;
+                    margin-left: 27px;
+                }
 
-                    @include breakpoint(md)
-                    {
-                        font-size: 2.25em;
-                    }
+                @include breakpoint(xl)
+                {
+                    font-size: 2.3em;
+                    margin-top: 26px;
+                    margin-left: 26px;
+                }
 
-                    @include breakpoint(lg)
-                    {
-                        font-size: 2.75em;
-                    }
+                @include breakpoint(xxl)
+                {
+                    font-size: 2.42em;
+                    margin-left: 30px;
+                }
 
-                    @include breakpoint(xl)
-                    {
-                        font-size: 2.5em;
-                    }
+                @include breakpoint(xxxl)
+                {
+                    font-size: 2.84em;
+                    margin-left: 39px;
+                }
 
-                    @include breakpoint(xxxl)
-                    {
-                        font-size: 3em;
-                    }
-
-                    &:hover
-                    {
-                        color: lighten($accent-color, 7%) !important;
-                        transform: translateY(-5px);
-                    }
+                &:hover
+                {
+                    color: $accent-color !important;
+                    transform: scale(1.1) !important;
                 }
             }
         }

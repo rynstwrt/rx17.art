@@ -1,3 +1,5 @@
+//main:main.scss
+
 #turntable
 {
     width: 250px;
@@ -11,8 +13,8 @@
 
     @include breakpoint(sm)
     {
-        width: 200px;
-        height: 200px;
+        width: 175px;
+        height: 175px;
     }
 
     @include breakpoint(md)
@@ -29,8 +31,8 @@
 
     @include breakpoint(xxxl)
     {
-        width: 450px;
-        height: 450px;
+        width: 500px;
+        height: 500px;
     }
 
     #arm-container
